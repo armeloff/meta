@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейс: Продвижение RupeeRedee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        tg: {
+                            blue: '#3390ec',
+                            lightBlue: '#e4f2fe',
+                            bg: '#f1f2f6',
+                            text: '#222222',
+                            gray: '#8c98a4',
+                            cardGray: '#f4f4f5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f1f2f6;
+            color: #222222;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+
+    <!-- Главный контейнер -->
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        
+        <!-- Шапка (сохранена) -->
+        <div class="bg-tg-blue px-8 py-10 text-white">
+            <div class="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4 backdrop-blur-sm">
+                FinTech • User Acquisition
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-2">
+                Кейс: Как мы привлекли 579 000+ установок и 44 000+ выданных займов
+            </h1>
+            <p class="text-blue-100 text-lg mt-4">
+                Как мы укротили перегретый аукцион Индии и победили нестабильный банковский скоринг
+            </p>
+        </div>
+
+        <!-- Тело кейса -->
+        <div class="p-8">
+            
+            <!-- Инфо-блок -->
+            <div class="bg-tg-cardGray border-l-4 border-tg-blue rounded-r-xl p-5 mb-8 text-sm sm:text-base flex flex-col sm:flex-row sm:flex-wrap gap-y-3 gap-x-8">
+                <div>
+                    <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Клиент</span>
+                    <span class="font-medium text-tg-text">RupeeRedee (Микрозаймы)</span>
+                </div>
+                <div>
+                    <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Посадка</span>
+                    <span class="font-medium text-tg-text">Android приложение</span>
+                </div>
+                <div>
+                    <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">ГЕО</span>
+                    <span class="font-medium text-tg-text">Индия 🇮🇳</span>
+                </div>
+                <div>
+                    <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Источник</span>
+                    <span class="font-medium text-tg-text">Meta (FB / IG)</span>
+                </div>
+                <div>
+                    <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Период</span>
+                    <span class="font-medium text-tg-text">2025 год</span>
+                </div>
+            </div>
+
+            <!-- Скриншот рекламного кабинета -->
+            <div class="mb-10">
+                <div class="relative cursor-pointer group rounded-xl overflow-hidden shadow-sm border border-gray-200" onclick="openLightbox('screenshot-placeholder')">
+                    <!-- Заглушка, сюда потом вставите реальный скриншот -->
+                    <img id="screenshot-placeholder" src="https://placehold.co/1200x600/e4f2fe/3390ec?text=Скриншот+рекламного+кабинета" alt="Скриншот рекламного кабинета" class="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]">
+                    
+                    <!-- Оверлей при наведении -->
+                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        <div class="bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-md flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                            Увеличить
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Раздел: Контекст (Situation) -->
+            <div class="mb-10 border-l-4 border-gray-300 pl-5">
+                <h2 class="text-xl font-bold text-tg-text mb-3">Ситуация на старте (Situation)</h2>
+                <p class="text-gray-700 leading-relaxed mb-2">
+                    <strong class="font-medium text-tg-text">Продукт:</strong> Мобильное приложение для выдачи микрокредитов.<br>
+                    <strong class="font-medium text-tg-text">Специфика рынка:</strong> Доминирование Android-устройств, низкий ARPU и выраженная мультиязычность.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-2">
+                    <strong class="font-medium text-tg-text">Контекст на старте:</strong> Основной объем трафика генерировал Google Ads, показывая понятные и стабильные объемы. В Facebook проводились только нерегулярные тестовые кампании инхаус-командой.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    <strong class="font-medium text-tg-text">Техническая база:</strong> Трекинг реализован через AppsFlyer, работа велась исключительно с Android-приложением.
+                </p>
+            </div>
+
+            <!-- Раздел: Цели и задачи (Task) -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2">
+                    <span class="text-2xl">🎯</span> Задачи проекта
+                </h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-tg-lightBlue text-tg-blue flex items-center justify-center font-bold text-sm mt-0.5">1</div>
+                        <div class="ml-3">
+                            <strong class="font-medium">Масштабирование:</strong> Превратить Facebook Ads в полноценный, прогнозируемый канал привлечения и выйти на стабильный выкуп трафика с большими бюджетами.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-tg-lightBlue text-tg-blue flex items-center justify-center font-bold text-sm mt-0.5">2</div>
+                        <div class="ml-3">
+                            <strong class="font-medium">Удержание KPI:</strong> Сохранять целевые метрики (CPA) в условиях высокой волатильности банковского скоринга (процент одобряемости плавал от месяца к месяцу и внутри недели).
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 w-6 h-6 rounded-full bg-tg-lightBlue text-tg-blue flex items-center justify-center font-bold text-sm mt-0.5">3</div>
+                        <div class="ml-3">
+                            <strong class="font-medium">Конкуренция:</strong> Эффективно конкурировать в аукционе за качественный сегмент аудитории, способный пройти скоринг и фактически получить деньги.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Раздел: Сложности проекта (Адаптировано) -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2">
+                    <span class="text-2xl">🚧</span> Сложности проекта
+                </h2>
+                <div class="bg-[#fdf3f2] text-[#d95040] p-5 rounded-xl space-y-3 text-sm sm:text-base">
+                    <p><strong>• Плавающий процент одобрения.</strong> Уровень одобрения кредитов (approval rate) постоянно меняется, что требует непрерывного управления ставками.</p>
+                    <p><strong>• Специфика аудитории и ГЕО.</strong> Индия требует креативов на локальных диалектах, а займы берут под разные нужды (от ремонта до зарплаты). Нужна широкая сетка углов для пробития баннерной слепоты.</p>
+                    <p><strong>• Качество трафика и конкуренция.</strong> Рынок МФО перегрет. Кампании на инсталлы приводят неплатежеспособную аудиторию — нужно выкупать тех, кто реально пройдет сложный скоринг.</p>
+                </div>
+            </div>
+
+            <!-- Раздел: Стратегия и решения (Action) -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2">
+                    <span class="text-2xl">🛠</span> Действия и стратегия
+                </h2>
+                
+                <div class="space-y-4">
+                    <!-- Решение 1 -->
+                    <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold">1</div>
+                            <h3 class="text-lg font-bold text-tg-text">Оптимизация на финальное действие</h3>
+                        </div>
+                        <p class="text-gray-600">Ключевым техническим решением стала настройка кампаний на событие выдачи займа (Purchase). Если бы оптимизация велась на промежуточный этап (Lead), алгоритм не смог бы адаптироваться к волатильности скоринга — система приводила бы дешевые заявки с нулевым апрувом. Оптимизация на финальное действие заставила Facebook искать пользователей с кредитным рейтингом, подходящим под текущие требования банков.</p>
+                    </div>
+
+                    <!-- Решение 2 -->
+                    <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold">2</div>
+                            <h3 class="text-lg font-bold text-tg-text">Матрица управления ставками</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Для адаптации к постоянным изменениям апрува применялось чередование трех стратегий закупки:</p>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li><strong class="text-tg-text">🔥 Bid Cap (Предельная ставка):</strong> Без ограничения бюджета. Применялась для агрессивного выкупа всего доступного трафика в рамках KPI, когда скоринговые модели банков были лояльны.</li>
+                            <li><strong class="text-tg-text">🛡 Cost Cap (Целевая цена):</strong> Использовалась как инструмент жесткого контроля рентабельности. Защищала бюджет от перерасхода в периоды перегрева аукциона.</li>
+                            <li><strong class="text-tg-text">⚖️ Lowest Cost (Макс. количество):</strong> Активировалась в периоды массовых отказов. Когда кампании с лимитами переставали тратить деньги, эта стратегия позволяла сохранять минимально необходимые объемы и не сбрасывать обучение алгоритмов.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Решение 3 -->
+                    <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold">3</div>
+                            <h3 class="text-lg font-bold text-tg-text">Креативная стратегия и локализация</h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-700">
+                            <li><strong class="text-tg-text">Диверсификация продакшена:</strong> Для обеспечения непрерывного тестирования гипотез и борьбы с выгоранием аудитории был выстроен комбинированный процесс. Разрабатывались кастомные («ручные») креативы с адаптацией под боли конкретных сегментов, а также активно применялись нейросети для потоковой генерации и быстрого масштабирования визуальных концепций.</li>
+                            <li><strong class="text-tg-text">Опора на бренд-перформанс:</strong> Несмотря на активный тест новых форматов, основную долю результатов на протяжении всего года генерировали брендовые креативы от компании. Они обеспечивали максимальную конверсию за счет высокой накопленной вовлеченности (engagement) и кросс-канальной узнаваемости среди аудитории, которая уже видела бренд в других источниках.</li>
+                            <li><strong class="text-tg-text">Мультиязычный подход:</strong> Адаптация рекламных материалов под основные региональные диалекты для повышения релевантности и CTR в разных штатах Индии.</li>
+                        </ul>
+
+                        <!-- Примеры креативов -->
+                        <div class="mt-6 grid grid-cols-3 gap-3">
+                            <div class="relative cursor-pointer group rounded-lg overflow-hidden shadow-sm border border-gray-200 aspect-square" onclick="openLightbox('creative-1')">
+                                <img id="creative-1" src="https://placehold.co/800x800/e4f2fe/3390ec?text=Креатив+1" alt="Креатив 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                                <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                    <svg class="w-8 h-8 text-white drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                </div>
+                            </div>
+                            <div class="relative cursor-pointer group rounded-lg overflow-hidden shadow-sm border border-gray-200 aspect-square" onclick="openLightbox('creative-2')">
+                                <img id="creative-2" src="https://placehold.co/800x800/e4f2fe/3390ec?text=Креатив+2" alt="Креатив 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                                <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                    <svg class="w-8 h-8 text-white drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                </div>
+                            </div>
+                            <div class="relative cursor-pointer group rounded-lg overflow-hidden shadow-sm border border-gray-200 aspect-square" onclick="openLightbox('creative-3')">
+                                <img id="creative-3" src="https://placehold.co/800x800/e4f2fe/3390ec?text=Креатив+3" alt="Креатив 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                                <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                    <svg class="w-8 h-8 text-white drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Раздел: Результаты -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2">
+                    <span class="text-2xl">📊</span> Результаты в цифрах
+                </h2>
+                <p class="text-sm text-tg-gray mb-6">Сводные данные на основе 40 рекламных кампаний</p>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                    <div class="bg-tg-lightBlue rounded-xl p-4 text-center">
+                        <div class="text-xs text-tg-gray uppercase font-semibold tracking-wide mb-1">Показы (Imp)</div>
+                        <div class="text-xl sm:text-2xl font-bold text-tg-blue">255+ млн</div>
+                    </div>
+                    <div class="bg-tg-lightBlue rounded-xl p-4 text-center">
+                        <div class="text-xs text-tg-gray uppercase font-semibold tracking-wide mb-1">Установки (CPI ~$0.65)</div>
+                        <div class="text-xl sm:text-2xl font-bold text-tg-blue">579 383</div>
+                    </div>
+                    <div class="bg-tg-lightBlue rounded-xl p-4 text-center col-span-2 sm:col-span-1">
+                        <div class="text-xs text-tg-gray uppercase font-semibold tracking-wide mb-1">Займы (Purchases)</div>
+                        <div class="text-xl sm:text-2xl font-bold text-tg-blue">44 096</div>
+                    </div>
+                </div>
+
+                <!-- Финансовый блок -->
+                <div class="flex flex-col sm:flex-row items-center justify-between bg-gray-50 border border-gray-100 rounded-xl p-5 mb-6">
+                    <div class="mb-4 sm:mb-0 text-center sm:text-left">
+                        <div class="text-sm text-tg-gray mb-1">Общий расход (Spend)</div>
+                        <div class="text-2xl font-bold text-tg-text">~$380 000</div>
+                        <div class="text-xs text-gray-400 mt-1">31 531 729 ₹</div>
+                    </div>
+                    <div class="h-10 w-px bg-gray-200 hidden sm:block"></div>
+                    <div class="text-center sm:text-right">
+                        <div class="text-sm text-tg-gray mb-1">Цена за выдачу (CPA)</div>
+                        <div class="text-2xl font-bold text-green-500">~$8.60</div>
+                        <div class="text-xs text-gray-400 mt-1">715,07 ₹</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Раздел: Выводы (Адаптировано) -->
+            <div>
+                <h2 class="text-2xl font-bold text-tg-text mb-4 flex items-center gap-2">
+                    <span class="text-2xl">💡</span> Итоговое резюме
+                </h2>
+                <div class="bg-white border border-gray-200 shadow-sm rounded-xl p-6 relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-tg-blue"></div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Успешное продвижение финансовых приложений на рынке Индии требует жесткого контроля стоимости конверсии. За счет связки <strong class="font-medium text-tg-text">«Оптимизация на финальное событие + Динамический выбор стратегии ставок + Бренд-перформанс и нейросети»</strong> нам удалось нивелировать нестабильность банковского апрува.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Проект доказал, что даже в условиях волатильного рынка можно стабильно масштабироваться: Facebook Ads был успешно переведен из статуса площадки для нерегулярных тестов в мощный и прогнозируемый источник трафика, сгенерировавший десятки тысяч реальных выдач займов.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Раздел: Призыв к действию (CTA) -->
+            <div class="mt-12 bg-tg-lightBlue border border-blue-100 rounded-2xl p-8 text-center shadow-sm relative overflow-hidden">
+                <!-- Декоративные элементы фона -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-2xl font-bold text-tg-text mb-3">Нужен похожий результат?</h2>
+                    <p class="text-gray-600 mb-6 max-w-lg mx-auto">
+                        Готов обсудить ваш проект, проанализировать текущую ситуацию и предложить эффективную стратегию привлечения целевого трафика.
+                    </p>
+                    <a href="https://t.me/armeloff" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-tg-blue hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.686c.223-.204-.054-.31-.346-.116l-6.405 4.032-2.766-.864c-.602-.188-.61-.602.126-.89l10.824-4.173c.502-.186.942.115.753.86z"/></svg>
+                        Написать в Telegram
+                    </a>
+                    <p class="mt-4 text-sm font-medium text-tg-blue">@armeloff</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Подвал -->
+    <div class="text-center mt-8 text-sm text-tg-gray">
+        Кейс подготовлен по результатам рекламной кампании за 2025 год.
+    </div>
+
+    <!-- Модальное окно (Lightbox) для скриншотов -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden flex items-center justify-center p-4 md:p-8 opacity-0 transition-opacity duration-300" onclick="closeLightbox()">
+        <div class="relative w-full max-w-6xl flex justify-center items-center h-full">
+            <button class="absolute top-4 right-4 md:-top-10 md:-right-10 text-white hover:text-gray-300 focus:outline-none transition-colors z-[60]" onclick="closeLightbox()">
+                <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <img id="lightbox-img" src="" alt="Увеличенный скриншот" class="max-w-full max-h-full object-contain rounded-md shadow-2xl cursor-default" onclick="event.stopPropagation()">
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(imgId) {
+            const imgSource = document.getElementById(imgId).src;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            lightboxImg.src = imgSource;
+            lightbox.classList.remove('hidden');
+            
+            // Небольшая задержка для срабатывания плавного появления
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+            }, 10);
+            
+            // Блокируем скролл страницы
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+            
+            // Возвращаем скролл
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Закрытие по клавише Esc
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && !document.getElementById('lightbox').classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
