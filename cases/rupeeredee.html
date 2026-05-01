@@ -23,7 +23,7 @@
 </head>
 <body class="antialiased min-h-screen">
 
-    <!-- Общий хедер -->
+    <!-- Общий хедер (инъекция из main.js) -->
     <header id="shared-header"></header>
 
     <main class="py-8 px-4 sm:px-6 lg:px-8">
@@ -82,17 +82,17 @@
                 </div>
 
                 <!-- Раздел: Контекст -->
-                <div class="mb-10 border-l-4 border-gray-300 pl-5">
+                <div class="mb-10 border-l-4 border-gray-300 pl-5 text-left">
                     <h2 class="text-xl font-bold text-tg-text mb-3">Ситуация на старте (Situation)</h2>
                     <p class="text-gray-700 leading-relaxed mb-2">
-                        <strong class="font-medium text-tg-text">Продукт:</strong> Мобильное приложение для выдачи микрокредитов.<br>
-                        <strong class="font-medium text-tg-text">Специфика рынка:</strong> Доминирование Android-устройств, низкий ARPU и выраженная мультиязычность.
+                        <strong class="font-medium text-tg-text text-black">Продукт:</strong> Мобильное приложение для выдачи микрокредитов.<br>
+                        <strong class="font-medium text-tg-text text-black">Специфика рынка:</strong> Доминирование Android-устройств, низкий ARPU и выраженная мультиязычность.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-2">
-                        <strong class="font-medium text-tg-text">Контекст на старте:</strong> Основной объем трафика генерировал Google Ads, показывая понятные и стабильные объемы. В Facebook проводились только нерегулярные тестовые кампании инхаус-командой.
+                        <strong class="font-medium text-tg-text text-black">Контекст на старте:</strong> Основной объем трафика генерировал Google Ads, показывая понятные и стабильные объемы. В Facebook проводились только нерегулярные тестовые кампании инхаус-командой.
                     </p>
                     <p class="text-gray-700 leading-relaxed">
-                        <strong class="font-medium text-tg-text">Техническая база:</strong> Трекинг реализован через AppsFlyer, работа велась исключительно с Android-приложением.
+                        <strong class="font-medium text-tg-text text-black">Техническая база:</strong> Трекинг реализован через AppsFlyer, работа велась исключительно с Android-приложением.
                     </p>
                 </div>
 
@@ -142,38 +142,37 @@
                     </h2>
                     <div class="space-y-4">
                         <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
-                            <div class="flex items-center gap-3 mb-3">
-                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold">1</div>
+                            <div class="flex items-center gap-3 mb-3 text-left">
+                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
                                 <h3 class="text-lg font-bold text-tg-text">Оптимизация на финальное действие</h3>
                             </div>
-                            <p class="text-gray-600">Ключевым техническим решением стала настройка кампаний на событие выдачи займа (Purchase). Если бы оптимизация велась на промежуточный этап (Lead), алгоритм не смог бы адаптироваться к волатильности скоринга — система приводила бы дешевые заявки с нулевым апрувом. Оптимизация на финальное действие заставила Facebook искать пользователей с кредитным рейтингом, подходящим под текущие требования банков.</p>
+                            <p class="text-gray-600 text-sm">Ключевым техническим решением стала настройка кампаний на событие выдачи займа (Purchase). Если бы оптимизация велась на промежуточный этап (Lead), алгоритм не смог бы адаптироваться к волатильности скоринга — система приводила бы дешевые заявки с нулевым апрувом.</p>
                         </div>
 
                         <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold">2</div>
+                            <div class="flex items-center gap-3 mb-4 text-left">
+                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
                                 <h3 class="text-lg font-bold text-tg-text">Матрица управления ставками</h3>
                             </div>
-                            <p class="text-gray-600 mb-4">Для адаптации к постоянным изменениям апрува применялось чередование трех стратегий закупки:</p>
+                            <p class="text-gray-600 mb-4 text-sm">Для адаптации к изменениям апрува применялось чередование трех стратегий:</p>
                             <ul class="space-y-3 text-sm text-gray-700">
-                                <li><strong class="text-tg-text">🔥 Bid Cap (Предельная ставка):</strong> Без ограничения бюджета. Применялась для агрессивного выкупа всего доступного трафика в рамках KPI, когда скоринговые модели банков были лояльны.</li>
-                                <li><strong class="text-tg-text">🛡 Cost Cap (Целевая цена):</strong> Использовалась как инструмент жесткого контроля рентабельности. Защищала бюджет от перерасхода в периоды перегрева аукциона.</li>
-                                <li><strong class="text-tg-text">⚖️ Lowest Cost (Макс. количество):</strong> Активировалась в периоды массовых отказов. Когда кампании с лимитами переставали тратить деньги, эта стратегия позволяла сохранять минимально необходимые объемы и не сбрасывать обучение алгоритмов.</li>
+                                <li><strong class="text-tg-text text-black">🔥 Bid Cap:</strong> Для агрессивного выкупа трафика в рамках KPI.</li>
+                                <li><strong class="text-tg-text text-black">🛡 Cost Cap:</strong> Инструмент жесткого контроля рентабельности.</li>
+                                <li><strong class="text-tg-text text-black">⚖️ Lowest Cost:</strong> Для сохранения минимальных объемов обучения.</li>
                             </ul>
                         </div>
 
                         <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold">3</div>
-                                <h3 class="text-lg font-bold text-tg-text">Креативная стратегия и локализация</h3>
+                            <div class="flex items-center gap-3 mb-4 text-left">
+                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
+                                <h3 class="text-lg font-bold text-tg-text">Креативная стратегия</h3>
                             </div>
                             <ul class="space-y-3 text-sm text-gray-700">
-                                <li><strong class="text-tg-text">Диверсификация продакшена:</strong> Для обеспечения непрерывного тестирования гипотез и борьбы с выгоранием аудитории был выстроен комбинированный процесс. Разрабатывались кастомные («ручные») креативы с адаптацией под боли конкретных сегментов, а также активно применялись нейросети для потоковой генерации и быстрого масштабирования визуальных концепций.</li>
-                                <li><strong class="text-tg-text">Опора на бренд-перформанс:</strong> Несмотря на активный тест новых форматов, основную долю результатов на протяжении всего года генерировали брендовые креативы от компании.</li>
-                                <li><strong class="text-tg-text">Мультиязычный подход:</strong> Адаптация рекламных материалов под основные региональные диалекты для повышения релевантности и CTR в разных штатах Индии.</li>
+                                <li><strong class="text-tg-text text-black">Диверсификация:</strong> Ручные креативы + генерация нейросетями для масштабирования концепций.</li>
+                                <li><strong class="text-tg-text text-black">Локализация:</strong> Адаптация под основные региональные диалекты Индии.</li>
                             </ul>
                             
-                            <!-- Креативы с оверлеем -->
+                            <!-- Креативы -->
                             <div class="mt-6 grid grid-cols-3 gap-3">
                                 <div class="img-zoom-container group relative aspect-square">
                                     <img src="https://placehold.co/800x800/e4f2fe/3390ec?text=Креатив+1" alt="Креатив 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
@@ -206,35 +205,35 @@
 
                 <!-- Результаты -->
                 <div class="mb-10 text-left">
-                    <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2">
+                    <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2 text-left">
                         <span class="text-2xl">📊</span> Результаты в цифрах
                     </h2>
-                    <p class="text-sm text-tg-gray mb-6 text-left">Сводные данные на основе 40 рекламных кампаний</p>
+                    <p class="text-sm text-tg-gray mb-6 text-left font-medium">Сводные данные на основе 40 рекламных кампаний</p>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
                         <div class="bg-tg-lightBlue rounded-xl p-4 text-center">
-                            <div class="text-xs text-tg-gray uppercase font-semibold tracking-wide mb-1">Показы</div>
-                            <div class="text-xl sm:text-2xl font-bold text-tg-blue">255+ млн</div>
+                            <div class="text-[10px] text-tg-gray uppercase font-bold mb-1">Показы</div>
+                            <div class="text-lg sm:text-2xl font-bold text-tg-blue">255+ млн</div>
                         </div>
                         <div class="bg-tg-lightBlue rounded-xl p-4 text-center">
-                            <div class="text-xs text-tg-gray uppercase font-semibold tracking-wide mb-1">Установки</div>
-                            <div class="text-xl sm:text-2xl font-bold text-tg-blue">579 383</div>
+                            <div class="text-[10px] text-tg-gray uppercase font-bold mb-1">Установки</div>
+                            <div class="text-lg sm:text-2xl font-bold text-tg-blue">579 383</div>
                         </div>
                         <div class="bg-tg-lightBlue rounded-xl p-4 text-center col-span-2 sm:col-span-1">
-                            <div class="text-xs text-tg-gray uppercase font-semibold tracking-wide mb-1">Займы</div>
-                            <div class="text-xl sm:text-2xl font-bold text-tg-blue">44 096</div>
+                            <div class="text-[10px] text-tg-gray uppercase font-bold mb-1">Займы</div>
+                            <div class="text-lg sm:text-2xl font-bold text-tg-blue">44 096</div>
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center justify-between bg-gray-50 border border-gray-100 rounded-xl p-5 mb-6 text-left">
                         <div class="mb-4 sm:mb-0">
                             <div class="text-sm text-tg-gray mb-1">Общий расход (Spend)</div>
                             <div class="text-2xl font-bold text-tg-text text-black">~$380 000</div>
-                            <div class="text-xs text-gray-400 mt-1 uppercase">31 531 729 ₹</div>
+                            <div class="text-[10px] text-gray-400 mt-1 font-bold uppercase">31 531 729 ₹</div>
                         </div>
                         <div class="h-10 w-px bg-gray-200 hidden sm:block"></div>
                         <div class="sm:text-right">
                             <div class="text-sm text-tg-gray mb-1">Цена за выдачу (CPA)</div>
                             <div class="text-2xl font-bold text-green-500">~$8.60</div>
-                            <div class="text-xs text-gray-400 mt-1 uppercase">715,07 ₹</div>
+                            <div class="text-[10px] text-gray-400 mt-1 font-bold uppercase">715,07 ₹</div>
                         </div>
                     </div>
                 </div>
@@ -246,11 +245,11 @@
                     </h2>
                     <div class="bg-white border border-gray-200 shadow-sm rounded-xl p-6 relative overflow-hidden">
                         <div class="absolute left-0 top-0 bottom-0 w-1 bg-tg-blue"></div>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
                             Успешное продвижение финансовых приложений на рынке Индии требует жесткого контроля стоимости конверсии. За счет связки <strong class="font-medium text-tg-text text-black">«Оптимизация на финальное событие + Динамический выбор стратегии ставок + Бренд-перформанс и нейросети»</strong> нам удалось нивелировать нестабильность банковского апрува.
                         </p>
-                        <p class="text-gray-700 leading-relaxed">
-                            Проект доказал, что даже в условиях волатильного рынка можно стабильно масштабироваться: Facebook Ads был успешно переведен из статуса площадки для нерегулярных тестов в мощный и прогнозируемый источник трафика, сгенерировавший десятки тысяч реальных выдач займов.
+                        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                            Проект доказал, что даже в условиях волатильного рынка можно стабильно масштабироваться: Facebook Ads был успешно переведен в статус мощного и прогнозируемого источника трафика.
                         </p>
                     </div>
                 </div>
@@ -271,17 +270,17 @@
         </div>
 
         <!-- Навигация -->
-        <div class="max-w-3xl mx-auto mt-8 flex justify-between items-center px-2">
-            <a href="/#cases" class="text-slate-400 hover:text-tg-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-colors">
+        <div class="max-w-3xl mx-auto mt-8 flex justify-between items-center px-2 text-left">
+            <a href="/#cases" class="text-slate-400 hover:text-tg-blue text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 transition-colors">
                 ← Все кейсы
             </a>
         </div>
     </main>
 
-    <!-- Общий футер -->
+    <!-- Общий футер (инъекция из main.js) -->
     <footer id="shared-footer"></footer>
 
-    <!-- Общая логика (хедер, футер, CTA, лайтбокс) -->
+    <!-- Общая логика -->
     <script src="/assets/js/main.js"></script>
 </body>
 </html>
