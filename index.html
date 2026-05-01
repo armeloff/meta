@@ -1,9 +1,11 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 1. Основное SEO -->
-    <title>Meta Ads Specialist | Кейсы и Методы</title>
+    <title>Meta Ads Specialist | Системный Performance-маркетинг</title>
     <meta name="description" content="Кейсы по масштабированию Meta Ads. Системный подход к Performance-маркетингу.">
     <meta name="author" content="Meta Ads Specialist">
 
@@ -50,42 +52,110 @@
         }
     </script>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-tg-bg text-left">
 
     <header id="shared-header"></header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="py-16 px-4 bg-white border-b border-gray-100 text-left">
+        <!-- 1. Блок: Обо мне / Интро -->
+        <section class="py-20 px-4 bg-white border-b border-gray-100">
             <div class="max-w-3xl mx-auto">
-                <h1 class="text-4xl font-black text-tg-text leading-tight mb-4">
-                    Performance-маркетинг в Meta Ads через анализ алгоритмов
+                <h1 class="text-4xl sm:text-5xl font-black text-tg-text leading-tight mb-6">
+                    Performance-маркетинг, <br><span class="text-tg-blue">основанный на данных.</span>
                 </h1>
-                <p class="text-gray-500 text-lg max-w-2xl">
-                    Я не «запускаю рекламу». Я строю системы на базе машинного обучения Meta (Lattice, Andromeda) для масштабирования сложных проектов.
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Я специализируюсь на масштабировании проектов в перегретых нишах (FinTech, E-com, EdTech). Работал с месячными бюджетами <strong>$300,000+</strong> на одном ГЕО. Мой подход — это не "подбор интересов", а управление обучением нейросетей Meta через чистые данные и корректную техническую базу.
                 </p>
-            </div>
-        </section>
-
-        <!-- Cases Grid -->
-        <section id="cases" class="py-12 px-4 container mx-auto">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-8">Результаты (Кейсы)</h2>
-                <div id="cases-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-                    <!-- Сюда JS вставит карточки из data/cases.json -->
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 text-sm font-bold text-slate-500">FinTech</div>
+                    <div class="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 text-sm font-bold text-slate-500">Global Apps</div>
+                    <div class="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 text-sm font-bold text-slate-500">Lattice-based Scaling</div>
                 </div>
             </div>
         </section>
 
-        <!-- Methods Preview -->
-        <section class="py-12 px-4 bg-white border-t border-gray-100">
-            <div class="max-w-3xl mx-auto text-left">
-                <h2 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-6">База знаний</h2>
-                <div class="space-y-6">
-                    <a href="/methods/lattice.html" class="block group">
-                        <h3 class="text-xl font-bold group-hover:text-tg-blue transition-colors text-black">Разбор алгоритма Lattice: как Meta перешла на единую модель предсказания →</h3>
-                        <p class="text-gray-500 text-sm mt-2 italic">Почему старые структуры кампаний больше не работают в 2025-2026 годах.</p>
+        <!-- 2. Блок: Методы и принципы (Коротко) -->
+        <section class="py-16 px-4 bg-slate-50">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-8">Методология</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-black">Data-First Approach</h3>
+                        <p class="text-sm text-gray-500">Использование CAPI и оффлайн-событий для обучения алгоритмов Meta на "чистую" прибыль, а не на дешевые клики.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-3 text-black">Algorithmic Scaling</h3>
+                        <p class="text-sm text-gray-500">Управление бюджетом через Cost Cap и Bid Cap матрицы, предотвращающие "переобучение" и выгорание кампаний.</p>
+                    </div>
+                </div>
+                <a href="/services.html" class="inline-flex items-center gap-2 text-tg-blue font-bold hover:underline">
+                    Подробнее о том, как я работаю →
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Блок: Кейсы (Сетка) -->
+        <section id="cases" class="py-20 px-4 container mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex justify-between items-end mb-12">
+                    <h2 class="text-3xl font-black text-tg-text">Кейсы</h2>
+                    <p class="text-sm text-gray-400 font-medium">Подтвержденные результаты</p>
+                </div>
+                <div id="cases-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Загружается из data/cases.json через main.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Блок: База знаний / Статьи -->
+        <section class="py-20 px-4 bg-white border-y border-gray-100">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-8">Статьи и аналитика</h2>
+                <div class="space-y-8">
+                    <a href="/methods/lattice.html" class="group block border-b border-gray-50 pb-8 last:border-0">
+                        <h3 class="text-xl font-bold group-hover:text-tg-blue transition-colors text-black mb-2">
+                            Lattice 2026: Почему старые структуры кампаний убивают ваш ROI →
+                        </h3>
+                        <p class="text-sm text-gray-500 italic">Разбор единой модели предсказания Meta и переход к Broad-таргетингу.</p>
                     </a>
+                    <!-- Можно добавить еще ссылки на будущие статьи -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Блок: Тарифы (CTA 1) -->
+        <section class="py-16 px-4 bg-tg-lightBlue">
+            <div class="max-w-3xl mx-auto text-center sm:text-left bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-blue-100">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-8">
+                    <div>
+                        <h2 class="text-2xl font-black text-tg-text mb-2">Форматы работы и тарифы</h2>
+                        <p class="text-gray-500 text-sm">От разовых аудитов до комплексного Performance-ведения.</p>
+                    </div>
+                    <a href="/services.html" class="whitespace-nowrap bg-tg-blue text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-blue-200 hover:scale-105 transition-transform">
+                        Узнать стоимость
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Блок: Финальный призыв (CTA 2) -->
+        <section class="py-24 px-4 bg-white">
+            <div class="max-w-xl mx-auto text-center">
+                <div class="mb-8 flex justify-center">
+                    <div class="w-16 h-16 bg-tg-blue text-white rounded-full flex items-center justify-center text-3xl shadow-xl shadow-blue-100">
+                        🤝
+                    </div>
+                </div>
+                <h2 class="text-3xl font-black text-tg-text mb-4">Готовы обсудить ваш проект?</h2>
+                <p class="text-gray-500 mb-10 leading-relaxed">
+                    Напишите мне в Telegram, чтобы назначить короткий звонок. Мы разберем вашу текущую ситуацию и прикинем потенциал масштабирования.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://t.me/armeloff" target="_blank" class="w-full sm:w-auto bg-tg-blue text-white font-bold py-4 px-10 rounded-full flex items-center justify-center gap-2">
+                        Написать @armeloff
+                    </a>
+                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Или</span>
+                    <a href="https://t.me/armeloff" class="text-tg-blue font-bold hover:underline">Назначить звонок →</a>
                 </div>
             </div>
         </section>
