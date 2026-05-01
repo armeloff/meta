@@ -18,13 +18,12 @@ const layouts = {
     cta: `
         <div class="bg-tg-lightBlue rounded-2xl p-8 border border-blue-100 relative overflow-hidden">
             <div class="relative z-10 text-center sm:text-left">
-                <h3 class="text-2xl font-bold text-tg-text mb-2">Нужен системный результат?</h3>
-                <p class="text-gray-600 mb-6 text-sm sm:text-base max-w-xl">
+                <h3 class="text-2xl font-bold text-tg-text mb-2 text-left">Нужен системный результат?</h3>
+                <p class="text-gray-600 mb-6 text-sm sm:text-base max-w-xl text-left">
                     Обсудим ваш проект, проанализируем текущие воронки и подберем оптимальную стратегию масштабирования через Meta Ads.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center gap-4">
                     <a href="${SITE_CONFIG.tgLink}" target="_blank" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-tg-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all shadow-md">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.686c.223-.204-.054-.31-.346-.116l-6.405 4.032-2.766-.864c-.602-.188-.61-.602.126-.89l10.824-4.173c.502-.186.942.115.753.86z"/></svg>
                         Написать в Telegram
                     </a>
                     <a href="/services.html" class="text-tg-blue text-sm font-bold hover:underline">
@@ -50,10 +49,10 @@ const layouts = {
     `
 };
 
-// Функции Lightbox вынесены в глобальную область для onclick
 window.openLightbox = function(src) {
     const lb = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-img');
+    if (!src) return;
     img.src = src;
     lb.classList.remove('hidden');
     setTimeout(() => lb.classList.remove('opacity-0'), 10);
@@ -62,36 +61,40 @@ window.openLightbox = function(src) {
 
 window.closeLightbox = function() {
     const lb = document.getElementById('lightbox');
-    lb.classList.add('opacity-0');
-    setTimeout(() => {
-        lb.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    }, 300);
+    if (lb) {
+        lb.classList.add('opacity-0');
+        setTimeout(() => {
+            lb.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Инъекция хедера, футера и CTA
     const header = document.getElementById('shared-header');
     const footer = document.getElementById('shared-footer');
     const cta = document.getElementById('shared-cta');
     
-    // Инъекция элементов
     if (header) header.innerHTML = layouts.header;
     if (footer) footer.innerHTML = layouts.footer;
     if (cta) cta.innerHTML = layouts.cta;
     
-    // Инъекция лайтбокса, если его еще нет
+    // 2. Инъекция лайтбокса
     if (!document.getElementById('lightbox')) {
         document.body.insertAdjacentHTML('beforeend', layouts.lightbox);
     }
 
-    // Автоматический поиск всех изображений в кейсе для увеличения
-    const caseImages = document.querySelectorAll('.prose img, .case-screenshot');
-    caseImages.forEach(img => {
-        img.style.cursor = 'zoom-in';
-        img.onclick = () => window.openLightbox(img.src);
+    // 3. Логика клика по картинкам (ищем картинки внутри врапперов)
+    const zoomWrappers = document.querySelectorAll('.img-zoom-wrapper');
+    zoomWrappers.forEach(wrapper => {
+        wrapper.onclick = function() {
+            const img = this.querySelector('img');
+            if (img) window.openLightbox(img.src);
+        };
     });
 
-    // Загрузка сетки кейсов на главной
+    // 4. Загрузка сетки кейсов (для главной)
     const grid = document.getElementById('cases-grid');
     if (grid) {
         fetch('/data/cases.json')
@@ -99,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(cases => {
                 grid.innerHTML = cases.map(c => `
                     <div class="case-card">
-                        <img src="${c.image}" alt="${c.title}" onerror="this.src='https://placehold.co/600x400?text=Case+Image'">
+                        <img src="${c.image}" alt="${c.title}">
                         <div class="case-content">
                             <span class="tag">${c.category}</span>
                             <h3>${c.title}</h3>
@@ -115,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Закрытие по ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") closeLightbox();
 });
