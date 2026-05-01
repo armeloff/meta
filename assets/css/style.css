@@ -86,6 +86,8 @@ header .container {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    /* Позволяет ссылке внутри растянуться на весь блок */
+    position: relative; 
 }
 
 .case-card:hover {
@@ -120,7 +122,8 @@ header .container {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
-    align-self: flex-start; /* Чтобы плашка не тянулась на всю ширину */
+    align-self: flex-start;
+    z-index: 2; /* Поверх растянутой ссылки */
 }
 
 /* Выделение заголовка */
@@ -164,11 +167,22 @@ header .container {
     gap: 4px;
 }
 
+/* Растягиваем область клика на всю карточку */
+.btn-read::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
 .btn-read:hover {
     color: var(--tg-blue);
 }
 
-/* Lightbox & Zoom (как было ранее) */
+/* Lightbox & Zoom */
 .img-zoom-container {
     position: relative;
     cursor: zoom-in;
