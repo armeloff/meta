@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.insertAdjacentHTML('beforeend', layouts.lightbox);
     }
 
-    // Ищем контейнеры с картинками (теперь универсально для всех)
     const zoomContainers = document.querySelectorAll('.img-zoom-container');
     zoomContainers.forEach(container => {
         container.onclick = function() {
@@ -92,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
-    // Отрисовка сетки на главной
     const grid = document.getElementById('cases-grid');
     if (grid) {
         fetch('/data/cases.json')
@@ -100,14 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(cases => {
                 grid.innerHTML = cases.map(c => `
                     <div class="case-card">
-                        <img src="${c.image}" alt="${c.title}">
+                        <img src="${c.image}" alt="${c.title}" onerror="this.src='https://placehold.co/600x400?text=Case+Image'">
                         <div class="case-content">
                             <span class="tag">${c.category}</span>
                             <h3>${c.title}</h3>
                             <p>${c.description}</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span class="metrics text-green-600 font-bold">${c.roi}</span>
-                                <a href="${c.link}" style="font-size: 12px; font-weight: bold; color: #222; text-decoration: none;">Смотреть →</a>
+                            <div class="case-footer">
+                                <span class="metrics">${c.roi}</span>
+                                <a href="${c.link}" class="btn-read">Читать кейс →</a>
                             </div>
                         </div>
                     </div>
