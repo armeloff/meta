@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.insertAdjacentHTML('beforeend', layouts.lightbox);
     }
 
-    // Ищем контейнеры с картинками
+    // Ищем контейнеры с картинками (теперь универсально для всех)
     const zoomContainers = document.querySelectorAll('.img-zoom-container');
     zoomContainers.forEach(container => {
         container.onclick = function() {
