@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и форматы работы | Meta Ads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] },
+                    colors: {
+                        tg: { blue: '#3390ec', lightBlue: '#e4f2fe', bg: '#f1f2f6', text: '#222222' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <header id="shared-header"></header>
+
+    <main class="py-12 px-4 text-left">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl font-black text-tg-text mb-8">Форматы сотрудничества</h1>
+
+            <div class="space-y-6">
+                <!-- Консалтинг -->
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-xl font-bold text-black">Разовая консультация / Аудит</h2>
+                        <span class="bg-tg-lightBlue text-tg-blue text-xs font-bold px-3 py-1 rounded-full uppercase">Slot based</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm">Глубокий разбор текущих кампаний, поиск технических ошибок в обучении Lattice и проверка корректности передачи данных через API. Идеально для инхаус-команд, которые «уперлись в потолок».</p>
+                    <ul class="space-y-2 mb-8 text-sm text-gray-700">
+                        <li>• Анализ структуры Advantage+</li>
+                        <li>• Проверка Signal Quality (CAPI)</li>
+                        <li>• Рекомендации по креативной стратегии</li>
+                    </ul>
+                    <a href="https://t.me/armeloff" class="inline-block bg-tg-blue text-white font-bold py-3 px-8 rounded-full text-sm">Забронировать слот</a>
+                </div>
+
+                <!-- Комплексное ведение -->
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] font-bold px-4 py-1 uppercase tracking-widest">Selected projects</div>
+                    <h2 class="text-xl font-bold mb-4 text-black text-left">Комплексное управление (Retention)</h2>
+                    <p class="text-gray-600 mb-6 text-sm">Полное погружение в проект. Беру не более 3-4 клиентов одновременно для обеспечения максимального качества аналитики и тестов.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <div class="text-[10px] text-gray-400 font-bold uppercase mb-1">Мин. бюджет</div>
+                            <div class="font-bold text-black">$5,000 / мес</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl">
+                            <div class="text-[10px] text-gray-400 font-bold uppercase mb-1">Fee</div>
+                            <div class="font-bold text-black">От $1,000 + %</div>
+                        </div>
+                    </div>
+                    <a href="https://t.me/armeloff" class="inline-block border-2 border-tg-blue text-tg-blue font-bold py-3 px-8 rounded-full text-sm">Обсудить KPI</a>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-12">
+                <h3 class="text-lg font-bold mb-6 text-black">Принципы работы</h3>
+                <div class="space-y-4 text-sm text-gray-600 leading-relaxed">
+                    <p><strong>Никаких гарантий на старте.</strong> Тесты — это поиск математически выгодной связки. Если кто-то обещает результат до запуска — это не ко мне.</p>
+                    <p><strong>Прозрачность.</strong> Работа в ваших кабинетах. Доступ к сырым данным и еженедельная отчетность по метрикам ROMI/CPA.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="shared-footer"></footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
