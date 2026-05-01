@@ -18,7 +18,7 @@ const layouts = {
     cta: `
         <div class="bg-tg-lightBlue rounded-2xl p-8 border border-blue-100 relative overflow-hidden">
             <div class="relative z-10 text-center sm:text-left">
-                <h3 class="text-2xl font-bold text-tg-text mb-2 text-left">Нужен системный результат?</h3>
+                <h3 class="text-2xl font-bold text-tg-text mb-2 text-left text-black">Нужен системный результат?</h3>
                 <p class="text-gray-600 mb-6 text-sm sm:text-base max-w-xl text-left">
                     Обсудим ваш проект, проанализируем текущие воронки и подберем оптимальную стратегию масштабирования через Meta Ads.
                 </p>
@@ -40,11 +40,11 @@ const layouts = {
         </div>
     `,
     lightbox: `
-        <div id="lightbox" class="fixed inset-0 z-[200] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-            <button class="absolute top-5 right-5 text-white hover:text-gray-300" onclick="closeLightbox()">
+        <div id="lightbox" class="fixed inset-0 z-[200] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeLightbox()">
+            <button class="absolute top-5 right-5 text-white hover:text-gray-300">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
-            <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl">
+            <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl" onclick="event.stopPropagation()">
         </div>
     `
 };
@@ -52,7 +52,7 @@ const layouts = {
 window.openLightbox = function(src) {
     const lb = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-img');
-    if (!src) return;
+    if (!src || !lb || !img) return;
     img.src = src;
     lb.classList.remove('hidden');
     setTimeout(() => lb.classList.remove('opacity-0'), 10);
@@ -71,7 +71,6 @@ window.closeLightbox = function() {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Инъекция хедера, футера и CTA
     const header = document.getElementById('shared-header');
     const footer = document.getElementById('shared-footer');
     const cta = document.getElementById('shared-cta');
@@ -80,21 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footer) footer.innerHTML = layouts.footer;
     if (cta) cta.innerHTML = layouts.cta;
     
-    // 2. Инъекция лайтбокса
     if (!document.getElementById('lightbox')) {
         document.body.insertAdjacentHTML('beforeend', layouts.lightbox);
     }
 
-    // 3. Логика клика по картинкам (ищем картинки внутри врапперов)
-    const zoomWrappers = document.querySelectorAll('.img-zoom-wrapper');
-    zoomWrappers.forEach(wrapper => {
-        wrapper.onclick = function() {
+    // Ищем контейнеры с картинками
+    const zoomContainers = document.querySelectorAll('.img-zoom-container');
+    zoomContainers.forEach(container => {
+        container.onclick = function() {
             const img = this.querySelector('img');
             if (img) window.openLightbox(img.src);
         };
     });
 
-    // 4. Загрузка сетки кейсов (для главной)
+    // Отрисовка сетки на главной
     const grid = document.getElementById('cases-grid');
     if (grid) {
         fetch('/data/cases.json')
@@ -108,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3>${c.title}</h3>
                             <p>${c.description}</p>
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span class="metrics">${c.roi}</span>
+                                <span class="metrics text-green-600 font-bold">${c.roi}</span>
                                 <a href="${c.link}" style="font-size: 12px; font-weight: bold; color: #222; text-decoration: none;">Смотреть →</a>
                             </div>
                         </div>
