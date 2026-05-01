@@ -39,18 +39,57 @@ const layouts = {
             <p>© 2026 Meta Ads Specialist. Все кейсы подтверждены данными. <br> 
             <a href="${SITE_CONFIG.tgLink}" style="color: #3390ec; text-decoration: none;">Написать в Telegram</a></p>
         </div>
+    `,
+    lightbox: `
+        <div id="lightbox" class="fixed inset-0 z-[200] bg-black/90 hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+            <button class="absolute top-5 right-5 text-white hover:text-gray-300" onclick="closeLightbox()">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <img id="lightbox-img" src="" class="max-w-full max-h-full object-contain rounded shadow-2xl">
+        </div>
     `
 };
 
+// Функции Lightbox вынесены в глобальную область для onclick
+window.openLightbox = function(src) {
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lb.classList.remove('hidden');
+    setTimeout(() => lb.classList.remove('opacity-0'), 10);
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeLightbox = function() {
+    const lb = document.getElementById('lightbox');
+    lb.classList.add('opacity-0');
+    setTimeout(() => {
+        lb.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }, 300);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Инъекция общих элементов
     const header = document.getElementById('shared-header');
     const footer = document.getElementById('shared-footer');
     const cta = document.getElementById('shared-cta');
     
+    // Инъекция элементов
     if (header) header.innerHTML = layouts.header;
     if (footer) footer.innerHTML = layouts.footer;
     if (cta) cta.innerHTML = layouts.cta;
+    
+    // Инъекция лайтбокса, если его еще нет
+    if (!document.getElementById('lightbox')) {
+        document.body.insertAdjacentHTML('beforeend', layouts.lightbox);
+    }
+
+    // Автоматический поиск всех изображений в кейсе для увеличения
+    const caseImages = document.querySelectorAll('.prose img, .case-screenshot');
+    caseImages.forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.onclick = () => window.openLightbox(img.src);
+    });
 
     // Загрузка сетки кейсов на главной
     const grid = document.getElementById('cases-grid');
@@ -74,4 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('');
             });
     }
+});
+
+// Закрытие по ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeLightbox();
 });
