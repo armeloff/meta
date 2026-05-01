@@ -3,25 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница не найдена | Meta Ads</title>
+    <title>Страница не найдена | Meta Ads Specialist</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] },
+                    colors: {
+                        tg: { 
+                            blue: '#3390ec', 
+                            bg: '#f1f2f6', 
+                            text: '#222222' 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="antialiased flex flex-col min-h-screen">
+<body class="antialiased flex flex-col min-h-screen bg-tg-bg">
 
+    <!-- Инъекция хедера через main.js -->
     <header id="shared-header"></header>
 
-    <main class="flex-grow flex items-center justify-center px-4">
-        <div class="text-center">
-            <h1 class="text-9xl font-black text-slate-200">404</h1>
-            <p class="text-xl font-bold text-tg-text mt-4">Похоже, этой страницы больше нет</p>
-            <p class="text-gray-500 mt-2 mb-8 text-sm">Но алгоритмы Meta всё еще работают. Возвращайтесь к кейсам.</p>
-            <a href="/" class="bg-tg-blue text-white font-bold py-3 px-8 rounded-full shadow-lg hover:scale-105 transition-transform inline-block">
-                Ко всем кейсам
+    <main class="flex-grow flex items-center justify-center px-4 py-20">
+        <div class="max-w-md w-full text-center">
+            <!-- Визуальный акцент -->
+            <div class="relative mb-8">
+                <h1 class="text-[120px] font-black text-white leading-none select-none drop-shadow-sm">404</h1>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <p class="text-xl font-bold text-tg-text uppercase tracking-widest bg-white/80 backdrop-blur-sm px-4 py-2 rounded">Упс!</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold text-tg-text mb-4">Страница потерялась в аукционе</h2>
+            <p class="text-gray-500 mb-10 text-sm leading-relaxed">
+                Похоже, эта ссылка больше не актуальна или была удалена. 
+                Но наши кейсы по масштабированию всё еще на месте.
+            </p>
+
+            <!-- ИСПРАВЛЕННАЯ КНОПКА: Четкий фон и белый текст -->
+            <a href="/" class="inline-block bg-[#3390ec] text-white font-bold py-4 px-10 rounded-full shadow-lg shadow-blue-200 hover:bg-blue-600 hover:scale-105 active:scale-95 transition-all">
+                Вернуться к кейсам
             </a>
         </div>
     </main>
 
+    <!-- Инъекция футера через main.js -->
     <footer id="shared-footer"></footer>
 
     <script src="/assets/js/main.js"></script>
