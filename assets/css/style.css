@@ -2,6 +2,7 @@
     --tg-blue: #3390ec;
     --tg-bg: #f1f2f6;
     --text-main: #222222;
+    --tag-bg: #e4f2fe;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     color: var(--text-main);
     margin: 0;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
 .container {
@@ -32,7 +34,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Позволяет элементам переноситься */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -40,24 +42,20 @@ header .container {
     text-decoration: none;
     color: var(--text-main);
     letter-spacing: -0.5px;
-    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #64748b;
-    margin-left: 25px;
     font-size: 14px;
     font-weight: 500;
     transition: color 0.2s;
-    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -67,35 +65,110 @@ header .container {
 .btn-tg-small {
     background: var(--tg-blue);
     color: white !important;
-    padding: 8px 16px;
+    padding: 8px 20px;
     border-radius: 20px;
+    font-weight: 700;
 }
 
-/* Адаптивность меню для мобильных устройств */
-@media (max-width: 640px) {
-    header {
-        padding: 10px 0;
-    }
-    header .container {
-        flex-direction: column; /* Логотип сверху, меню снизу */
-        gap: 12px;
-    }
-    .nav-links {
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
-    }
-    .nav-links a {
-        margin-left: 0; /* Убираем левый отступ, заменяем на gap */
-        margin-right: 10px;
-        font-size: 13px;
-    }
-    .btn-tg-small {
-        padding: 6px 12px;
-    }
+/* Grid & Case Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Стили для контейнера скриншота */
+.case-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -10px rgba(0,0,0,0.08);
+    border-color: var(--tg-blue);
+}
+
+.case-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.case-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стилизация категории (Тега) */
+.tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tg-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    align-self: flex-start; /* Чтобы плашка не тянулась на всю ширину */
+}
+
+/* Выделение заголовка */
+.case-card h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--text-main);
+}
+
+.case-card p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.case-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px dashed #e5e7eb;
+}
+
+.metrics {
+    font-weight: 800;
+    color: #10b981;
+    font-size: 14px;
+}
+
+.btn-read {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-read:hover {
+    color: var(--tg-blue);
+}
+
+/* Lightbox & Zoom (как было ранее) */
 .img-zoom-container {
     position: relative;
     cursor: zoom-in;
@@ -115,7 +188,16 @@ header .container {
     transform: scale(1.03);
 }
 
-/* Footer */
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
+
 footer {
     padding: 60px 0 40px;
     text-align: center;
