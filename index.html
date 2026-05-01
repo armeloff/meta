@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads Specialist | Кейсы и Методы</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] },
+                    colors: {
+                        tg: { blue: '#3390ec', bg: '#f1f2f6', text: '#222222' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <header id="shared-header"></header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 px-4 bg-white border-b border-gray-100 text-left">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-black text-tg-text leading-tight mb-4">
+                    Performance-маркетинг в Meta Ads через анализ алгоритмов
+                </h1>
+                <p class="text-gray-500 text-lg max-w-2xl">
+                    Я не «запускаю рекламу». Я строю системы на базе машинного обучения Meta (Lattice, Andromeda) для масштабирования сложных проектов.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cases Grid -->
+        <section id="cases" class="py-12 px-4 container mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-8">Результаты (Кейсы)</h2>
+                <div id="cases-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                    <!-- Сюда JS вставит карточки из data/cases.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Methods Preview -->
+        <section class="py-12 px-4 bg-white border-t border-gray-100">
+            <div class="max-w-3xl mx-auto text-left">
+                <h2 class="text-xs uppercase tracking-widest font-black text-gray-400 mb-6">База знаний</h2>
+                <div class="space-y-6">
+                    <a href="/methods/lattice.html" class="block group">
+                        <h3 class="text-xl font-bold group-hover:text-tg-blue transition-colors text-black">Разбор алгоритма Lattice: как Meta перешла на единую модель предсказания →</h3>
+                        <p class="text-gray-500 text-sm mt-2 italic">Почему старые структуры кампаний больше не работают в 2025-2026 годах.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="shared-footer"></footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
