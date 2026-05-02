@@ -2,10 +2,22 @@
   {
     "id": "case-01",
     "title": "579 000+ установок и 44 000+ выданных займов",
-    "category": "FinTech",
-    "roi": "CPA $8.60",
+    "category": "FinTech • User Acquisition",
+    "roi": "CPI $0.65 CPA $8.60" ,
     "image": "/assets/img/cases/rupeeredee/creo1.webp",
     "link": "/cases/rupeeredee.html",
     "description": "Как мы укротили перегретый аукцион Индии и победили нестабильный банковский скоринг"
+  }
+]
+
+[
+  {
+    "id": "case-02",
+    "title": "25 700+ лидов на гражданство Израиля",
+    "category": "Legal • Lead Generation",
+    "roi": "CPL $5.33",
+    "image": "/assets/img/cases/israel/creo1.webp",
+    "link": "/cases/israel.html",
+    "description": "Как мы управляли аукционом Facebook через ненависть в комментариях"
   }
 ]
