@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейс: Лидогенерация на гражданство Израиля</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Общие стили -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Roboto', 'sans-serif'] },
+                    colors: {
+                        tg: { blue: '#3390ec', lightBlue: '#e4f2fe', bg: '#f1f2f6', text: '#222222', gray: '#8c98a4', cardGray: '#f4f4f5' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Общий хедер (инъекция из main.js) -->
+    <header id="shared-header"></header>
+
+    <main class="py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Главный контейнер -->
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden text-left">
+            
+            <!-- Шапка кейса -->
+            <div class="bg-tg-blue px-8 py-10 text-white">
+                <div class="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4 backdrop-blur-sm">
+                    Legal • Lead Generation
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-bold leading-tight mb-2">
+                    Кейс: 25 700+ лидов на гражданство Израиля
+                </h1>
+                <p class="text-blue-100 text-lg mt-4">
+                    Как мы управляли аукционом Facebook через ненависть в комментариях
+                </p>
+            </div>
+
+            <!-- Тело кейса -->
+            <div class="p-8">
+                
+                <!-- Инфо-блок -->
+                <div class="bg-tg-cardGray border-l-4 border-tg-blue rounded-r-xl p-5 mb-8 text-sm sm:text-base flex flex-col sm:flex-row sm:flex-wrap gap-y-3 gap-x-8">
+                    <div>
+                        <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Клиент</span>
+                        <span class="font-medium text-tg-text text-black">Агентство по репатриации</span>
+                    </div>
+                    <div>
+                        <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Посадка</span>
+                        <span class="font-medium text-tg-text text-black">Quiz / Leadform</span>
+                    </div>
+                    <div>
+                        <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">ГЕО</span>
+                        <span class="font-medium text-tg-text text-black">Global (США + RU-мир)</span>
+                    </div>
+                    <div>
+                        <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Источник</span>
+                        <span class="font-medium text-tg-text text-black">Meta (FB / IG)</span>
+                    </div>
+                    <div>
+                        <span class="text-tg-gray block text-xs uppercase tracking-wider font-semibold">Период</span>
+                        <span class="font-medium text-tg-text text-black">2024-2025</span>
+                    </div>
+                </div>
+
+                <!-- Скриншот рекламного кабинета -->
+                <div class="img-zoom-container group relative mb-10">
+                    <img src="../assets/img/cases/israel/screen.webp" alt="Скриншот рекламного кабинета Meta Ads" class="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]">
+                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        <div class="bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-md flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                            Увеличить
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Раздел: Контекст -->
+                <div class="mb-10 border-l-4 border-gray-300 pl-5 text-left">
+                    <h2 class="text-xl font-bold text-tg-text mb-3 text-black">Ситуация на старте (Situation)</h2>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        <strong class="font-medium text-tg-text text-black">Продукт:</strong> Услуги по получению израильского паспорта (репатриация) от одного из крупнейших международных агентств.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        <strong class="font-medium text-tg-text text-black">Специфика рынка:</strong> Проект строился вокруг двух совершенно разных, изолированных направлений. Первое — англоязычные евреи, давно мигрировавшие в США. Второе — русскоязычные экспаты, рассеянные по всему миру (Европа, Азия, СНГ).
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        <strong class="font-medium text-tg-text text-black">Контекст на старте:</strong> Запуск канала Meta Ads с нуля для системного масштабирования потока заявок на зарубежных рынках.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong class="font-medium text-tg-text text-black">Техническая база:</strong> Конвертеры — квизы (Quiz) на посадочных страницах и внутренние лид-формы (Lead Forms) Facebook.
+                    </p>
+                </div>
+
+                <!-- Раздел: Задачи -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2 text-black">
+                        <span class="text-2xl">🎯</span> Задачи проекта
+                    </h2>
+                    <ul class="space-y-4 text-left">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-tg-lightBlue text-tg-blue flex items-center justify-center font-bold text-sm mt-0.5">1</div>
+                            <div class="ml-3">
+                                <strong class="font-medium text-black">Максимизация объема заявок.</strong> Главный фокус — на количестве входящих лидов из разных ГЕО.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-tg-lightBlue text-tg-blue flex items-center justify-center font-bold text-sm mt-0.5">2</div>
+                            <div class="ml-3">
+                                <strong class="font-medium text-black">Отказ от глубокой оптимизации аукциона.</strong> Оптимизация на качество лида (Purchase / Qualified Lead) была исключена из-за слишком длительного цикла квалификации и продаж в юридической нише.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Раздел: Сложности -->
+                <div class="mb-10 text-left">
+                    <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2 text-black">
+                        <span class="text-2xl">🚧</span> Сложности проекта
+                    </h2>
+                    <div class="bg-[#fdf3f2] text-[#d95040] p-5 rounded-xl space-y-4 text-sm sm:text-base">
+                        <p><strong>• США: Фейковые лиды и поиск ценности.</strong> Американское гражданство — одно из сильнейших в мире. Очевидных причин получать паспорт Израиля у жителей США мало. Кроме того, кампании собирали шквал «мусорных» лидов: антисемиты оставляли заявки, чтобы высказать ненависть, а сочувствующие — чтобы просто сказать «спасибо». Вычленить из этой массы реальных клиентов было крайне сложно.</p>
+                        <p><strong>• RU-мир: Радикальная неоднородность.</strong> Русскоязычную аудиторию нельзя было заливать одной кампанией. Экспаты на Бали или в Таиланде, давние эмигранты в Германии и жители бывших стран СНГ — это совершенно разные паттерны потребления, требующие разных подходов. А ряд ГЕО генерировал столько нецелевого мусора, что требовал особых воронок-фильтров.</p>
+                        <p><strong>• Модерация и банкинг.</strong> Высокий уровень политизированности ниши приводил к регулярным блокировкам кабинетов. Ситуацию усложнял израильский банкинг (ручное подтверждение транзакций, шаббат), требующий жесткого контроля балансов во избежание остановок открута.</p>
+                    </div>
+                </div>
+
+                <!-- Раздел: Стратегия -->
+                <div class="mb-10 text-left">
+                    <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2 text-black">
+                        <span class="text-2xl">🛠</span> Действия и стратегия
+                    </h2>
+                    <div class="space-y-4">
+                        <!-- Решение 1 -->
+                        <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
+                            <div class="flex items-center gap-3 mb-3 text-left">
+                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
+                                <h3 class="text-lg font-bold text-tg-text text-black">Направление США: Диаспоры и смыслы</h3>
+                            </div>
+                            <p class="text-gray-600">Мы разделили кампании: отдельно таргетировались на города с сильнейшей еврейской диаспорой (например, Нью-Йорк) и отдельно — на широкую аудиторию по всей стране. Чтобы донести ценность израильского паспорта для американца, тестировались десятки нестандартных рекламных углов: от «возвращения на историческую родину» до «паломничества».</p>
+                        </div>
+
+                        <!-- Решение 2 -->
+                        <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
+                            <div class="flex items-center gap-3 mb-3 text-left">
+                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
+                                <h3 class="text-lg font-bold text-tg-text text-black">Направление RU-мир: Жесткая сегментация</h3>
+                            </div>
+                            <p class="text-gray-600">Был реализован индивидуальный подход к каждой географии. Для релокантов в Южной Азии использовались одни посылы, для жителей Прибалтики и Европы — другие. Для стран Кавказа и Центральной Азии (Азербайджан, Казахстан и др.) выстраивались дополнительные фильтрующие воронки или эти регионы полностью исключались, чтобы отсечь массивы нецелевого трафика.</p>
+                        </div>
+
+                        <!-- Решение 3 -->
+                        <div class="border border-gray-200 shadow-sm rounded-xl p-6 hover:border-tg-blue transition-colors">
+                            <div class="flex items-center gap-3 mb-4 text-left">
+                                <div class="bg-tg-blue text-white rounded-md w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
+                                <h3 class="text-lg font-bold text-tg-text text-black">Алгоритмы Meta и сила «хейта»</h3>
+                            </div>
+                            <ul class="space-y-3 text-sm text-gray-700 mb-6">
+                                <li><strong class="text-tg-text text-black font-bold">Нейро-продакшен:</strong> Был совершен переход от ручного создания креативов к массовой генерации с помощью ИИ, что позволило непрерывно тестировать новые смыслы для разных сегментов.</li>
+                                <li><strong class="text-tg-text text-black font-bold">Взлом аукциона через негатив:</strong> Специфика ниши принесла более 15 000 комментариев, большинство из которых состояло из проклятий и оскорблений. Алгоритм автоматических ставок (Lowest Cost) считывал этот шквал реакций как «сверх-вовлеченность», что закономерно приводило к обрушению аукционной стоимости показа (CPM) и радикальному удешевлению лида.</li>
+                            </ul>
+
+                            <!-- Сетка креативов с оверлеями -->
+                            <div class="mt-6 grid grid-cols-3 gap-3">
+                                <div class="img-zoom-container group relative aspect-square">
+                                    <img src="../assets/img/cases/israel/creo1.webp" alt="Креатив 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <div class="bg-black/70 text-white p-2 rounded-full backdrop-blur-md">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img-zoom-container group relative aspect-square">
+                                    <img src="../assets/img/cases/israel/creo2.webp" alt="Креатив 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <div class="bg-black/70 text-white p-2 rounded-full backdrop-blur-md">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img-zoom-container group relative aspect-square">
+                                    <img src="../assets/img/cases/israel/creo3.webp" alt="Креатив 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <div class="bg-black/70 text-white p-2 rounded-full backdrop-blur-md">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Результаты -->
+                <div class="mb-10 text-left">
+                    <h2 class="text-2xl font-bold text-tg-text mb-5 flex items-center gap-2 text-black">
+                        <span class="text-2xl">📊</span> Результаты в цифрах
+                    </h2>
+                    
+                    <!-- Итоговые метрики (Сводка) -->
+                    <div class="bg-tg-blue rounded-xl p-6 text-white mb-6 shadow-md text-left">
+                        <h3 class="text-lg font-medium text-blue-100 mb-4 border-b border-blue-400/50 pb-2">Итоговые метрики по всем направлениям</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                            <div>
+                                <div class="text-sm text-blue-200 mb-1">Всего лидов</div>
+                                <div class="text-2xl font-bold">25 714</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-blue-200 mb-1">Средний CPL</div>
+                                <div class="text-2xl font-bold">$5.33</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-blue-200 mb-1">Расход</div>
+                                <div class="text-2xl font-bold">~$137 026</div>
+                            </div>
+                            <div>
+                                <div class="text-sm text-blue-200 mb-1">Комментариев</div>
+                                <div class="text-2xl font-bold text-yellow-300">15 580</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Разбивка по ГЕО -->
+                    <div class="grid sm:grid-cols-2 gap-5 text-left">
+                        <!-- Направление: Русскоязычный мир -->
+                        <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-xl">🌍</span>
+                                <h4 class="font-bold text-tg-text text-black">Русскоязычный мир</h4>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="text-sm text-gray-500">Общий расход</span>
+                                    <span class="font-medium text-black">$67 164,42</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="text-sm text-gray-500">Количество лидов</span>
+                                    <span class="font-medium text-tg-blue">7 553</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="text-sm text-gray-500">Цена за лид (CPL)</span>
+                                    <span class="font-medium text-green-600">$8.89</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Комментарии</span>
+                                    <span class="font-medium text-black">7 701</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Направление: США -->
+                        <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-sm">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-xl">🇺🇸</span>
+                                <h4 class="font-bold text-tg-text text-black">США (Англоязычное)</h4>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="text-sm text-gray-500">Общий расход</span>
+                                    <span class="font-medium text-black">$69 862,19</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="text-sm text-gray-500">Количество лидов</span>
+                                    <span class="font-medium text-tg-blue">18 161</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                                    <span class="text-sm text-gray-500">Цена за лид (CPL)</span>
+                                    <span class="font-medium text-green-600">$3.85</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500">Комментарии</span>
+                                    <span class="font-medium text-black">7 879</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Резюме -->
+                <div class="text-left mb-12">
+                    <h2 class="text-2xl font-bold text-tg-text mb-4 flex items-center gap-2 text-black">
+                        <span class="text-2xl">💡</span> Итоговое резюме
+                    </h2>
+                    <div class="bg-white border border-gray-200 shadow-sm rounded-xl p-6 relative overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-tg-blue"></div>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Привлечение более <strong class="font-medium text-tg-text text-black font-bold">25 000 заявок со средним CPL $5.33</strong> в сложной юридической нише доказало: иногда нужен полный отказ от микроменеджмента ставок в пользу широкой оптимизации алгоритмов.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Негативный социальный отклик (массовый хейт в комментариях) можно использовать как мощный рычаг для снижения CPM. Однако такая стратегия требует стальных нервов, жестко выстроенной системы работы с платежами и непрерывной замены блокируемых рекламных кабинетов.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Общий CTA (инъекция из main.js) -->
+                <div id="shared-cta" class="mt-12"></div>
+
+                <!-- Метод -->
+                <div class="mt-8 p-6 bg-slate-50 rounded-xl border border-dashed border-slate-300 flex items-start gap-4 text-left">
+                    <div class="text-2xl mt-1 text-black">🧠</div>
+                    <div>
+                        <h4 class="font-bold text-sm mb-1 text-black text-left">Как это работает технически?</h4>
+                        <p class="text-xs text-slate-600 mb-2 text-left">В этом проекте я использовал алгоритм Lattice. Подробности в лонгриде.</p>
+                        <a href="/methods/lattice.html" class="text-tg-blue font-bold text-xs hover:underline uppercase tracking-wider">Читать про метод</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навигация -->
+        <div class="max-w-3xl mx-auto mt-8 flex justify-between items-center px-2 text-left">
+            <a href="/#cases" class="text-slate-400 hover:text-tg-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-colors">
+                ← Все кейсы
+            </a>
+        </div>
+    </main>
+
+    <!-- Общий футер (инъекция из main.js) -->
+    <footer id="shared-footer"></footer>
+
+    <!-- Общая логика -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
