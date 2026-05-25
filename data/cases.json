@@ -1,14 +1,13 @@
 [
   {
     "id": "case-01",
-    "title": "579 000+ установок и 44 000+ выданных займов",
+    "title": "579 000+ установок и 44 000+ выдач в Индии",
     "category": "FinTech • User Acquisition",
-    "roi": "CPI $0.65 CPA $8.60" ,
+    "roi": "CPI $0.65 CPA $8.60",
     "image": "/assets/img/cases/rupeeredee/creo1.webp",
     "link": "/cases/rupeeredee.html",
     "description": "Как мы укротили перегретый аукцион Индии и победили нестабильный банковский скоринг"
   },
-  
   {
     "id": "case-02",
     "title": "25 700+ лидов на гражданство Израиля",
@@ -17,5 +16,14 @@
     "image": "/assets/img/cases/israel/creo1.jpg",
     "link": "/cases/israel.html",
     "description": "Как мы управляли аукционом Facebook через ненависть в комментариях"
+  },
+  {
+    "id": "case-03",
+    "title": "Снижение стоимости продажи подписей в США",
+    "category": "Design Services • E-commerce",
+    "roi": "CPA $22.40",
+    "image": "/assets/img/cases/israel/creo1.jpg",
+    "link": "/cases/signaturepro.html",
+    "description": "Как масштабировать дизайн-проект на высококонкурентном рынке без выгорания аудитории"
   }
 ]
